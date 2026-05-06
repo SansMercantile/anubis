@@ -1,0 +1,546 @@
+/* ANUBIS AI Security & Threat Detection Theme */
+/* Security-themed dark futuristic design for ANUBIS */
+
+:root {
+  /* ANUBIS Security Theme Colors */
+  --system-primary: #ff0066;      /* Security red */
+  --system-secondary: #0066ff;    /* Security blue */
+  --system-accent: #ffaa00;       /* Warning orange */
+  --system-bg: #0a0a0a;          /* Deep black */
+  --system-card-bg: #1a0a0a;     /* Dark red tint */
+  --system-text: #ffffff;        /* White text */
+  --system-text-secondary: #ff9999; /* Light red */
+  
+  /* Security specific colors */
+  --security-alert: #ff0066;
+  --security-warning: #ffaa00;
+  --security-safe: #00ff88;
+  --security-critical: #ff0000;
+  --security-scanning: #0099ff;
+  
+  /* Gradients */
+  --security-gradient: linear-gradient(135deg, #ff0066, #0066ff);
+  --threat-gradient: linear-gradient(135deg, #ff0000, #ff0066);
+  --safe-gradient: linear-gradient(135deg, #00ff88, #0099ff);
+}
+
+/* Security Grid Background */
+.neural-grid-bg {
+  background-image: 
+    linear-gradient(rgba(255, 0, 102, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 102, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 102, 255, 0.1) 0%, transparent 50%);
+  background-size: 40px 40px, 40px 40px, 300px 300px, 300px 300px;
+}
+
+/* Security Pulse Animation */
+@keyframes securityPulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(255, 0, 102, 0.8);
+    transform: scale(1.02);
+  }
+}
+
+/* Threat Scan Animation */
+@keyframes threatScan {
+  0% { transform: translateX(-100%) scaleX(0); }
+  50% { transform: translateX(0%) scaleX(1); }
+  100% { transform: translateX(100%) scaleX(0); }
+}
+
+/* Security Alert Animation */
+@keyframes securityAlert {
+  0%, 100% { 
+    background: rgba(255, 0, 102, 0.1);
+    border-color: var(--security-alert);
+  }
+  50% { 
+    background: rgba(255, 0, 102, 0.3);
+    border-color: var(--security-critical);
+  }
+}
+
+/* Radar Sweep Animation */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Security Status Indicators */
+.security-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 0, 102, 0.1);
+  border: 1px solid var(--security-alert);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  margin: 5px;
+  animation: securityPulse 3s ease-in-out infinite;
+}
+
+.security-status.safe {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--security-safe);
+}
+
+.security-status.warning {
+  background: rgba(255, 170, 0, 0.1);
+  border-color: var(--security-warning);
+  animation: securityAlert 2s ease-in-out infinite;
+}
+
+.security-status.critical {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: var(--security-critical);
+  animation: securityAlert 1s ease-in-out infinite;
+}
+
+.security-status.scanning {
+  background: rgba(0, 153, 255, 0.1);
+  border-color: var(--security-scanning);
+}
+
+/* Security Cards */
+.security-card {
+  background: linear-gradient(135deg, rgba(26, 10, 10, 0.8), rgba(10, 10, 26, 0.8));
+  border: 1px solid var(--security-alert);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.security-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 102, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.security-card:hover::before {
+  left: 100%;
+}
+
+.security-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--security-alert);
+  box-shadow: 0 15px 30px rgba(255, 0, 102, 0.2);
+  animation: securityPulse 2s ease-in-out infinite;
+}
+
+/* Threat Detection Display */
+.threat-detector {
+  background: rgba(10, 10, 10, 0.9);
+  border: 2px solid var(--security-alert);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.threat-detector::before {
+  content: '🛡️';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: var(--system-bg);
+  padding: 0 10px;
+  font-size: 1.5rem;
+}
+
+.threat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.threat-item {
+  background: rgba(255, 0, 102, 0.1);
+  border-left: 4px solid var(--security-alert);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.threat-item:hover {
+  background: rgba(255, 0, 102, 0.2);
+  transform: translateX(5px);
+}
+
+.threat-item.safe {
+  background: rgba(0, 255, 136, 0.1);
+  border-left-color: var(--security-safe);
+}
+
+.threat-item.warning {
+  background: rgba(255, 170, 0, 0.1);
+  border-left-color: var(--security-warning);
+}
+
+.threat-item.critical {
+  background: rgba(255, 0, 0, 0.1);
+  border-left-color: var(--security-critical);
+  animation: securityAlert 2s ease-in-out infinite;
+}
+
+/* Security Radar */
+.security-radar {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--security-alert);
+  border-radius: 50%;
+  position: relative;
+  margin: 2rem auto;
+  background: radial-gradient(circle, rgba(255, 0, 102, 0.1) 0%, transparent 70%);
+}
+
+.radar-sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 50%;
+  background: linear-gradient(to bottom, var(--security-alert), transparent);
+  transform-origin: bottom center;
+  animation: radarSweep 3s linear infinite;
+}
+
+.radar-blip {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--security-alert);
+  border-radius: 50%;
+  animation: securityPulse 2s ease-in-out infinite;
+}
+
+/* Security Metrics Display */
+.security-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.security-metric {
+  background: var(--security-gradient);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.security-metric::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: threatScan 3s linear infinite;
+}
+
+.security-metric:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 0, 102, 0.3);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', monospace;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Security Avatar Enhancements */
+.security-avatar {
+  background: var(--security-gradient);
+  box-shadow: 0 0 30px rgba(255, 0, 102, 0.6);
+  animation: securityPulse 3s ease-in-out infinite;
+}
+
+.security-avatar .avatar-face {
+  background: linear-gradient(135deg, #ffffff, #ffe0e0);
+}
+
+.security-avatar .avatar-eye {
+  background: var(--security-alert);
+  box-shadow: 0 0 5px rgba(255, 0, 102, 0.8);
+}
+
+.security-avatar .avatar-mouth {
+  border-color: var(--security-alert);
+  box-shadow: 0 0 5px rgba(255, 0, 102, 0.5);
+}
+
+/* Threat Scanner */
+.threat-scanner {
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 0, 102, 0.1);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+  border: 1px solid var(--security-alert);
+}
+
+.scanner-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--security-alert);
+  transform: translateY(-50%);
+}
+
+.scanner-sweep {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 102, 0.8), transparent);
+  animation: threatScan 2s linear infinite;
+}
+
+/* Security Alert Panel */
+.security-alert-panel {
+  background: var(--threat-gradient);
+  border: 2px solid var(--security-critical);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  animation: securityAlert 2s ease-in-out infinite;
+}
+
+.security-alert-panel.safe {
+  background: var(--safe-gradient);
+  border-color: var(--security-safe);
+  animation: none;
+}
+
+/* Security Monitor */
+.security-monitor {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid var(--security-alert);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--security-alert);
+}
+
+.monitor-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--security-alert);
+}
+
+.monitor-status {
+  background: rgba(255, 0, 102, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Security Progress Bars */
+.security-progress {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  height: 20px;
+  margin: 1rem 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--security-alert);
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--security-gradient);
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: threatScan 2s linear infinite;
+}
+
+/* Security System Status */
+.security-system-health {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.security-health-indicator {
+  background: rgba(255, 0, 102, 0.1);
+  border: 1px solid var(--security-alert);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.security-health-indicator.secure {
+  border-color: var(--security-safe);
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.security-health-indicator.warning {
+  border-color: var(--security-warning);
+  background: rgba(255, 170, 0, 0.1);
+}
+
+.security-health-indicator.breach {
+  border-color: var(--security-critical);
+  background: rgba(255, 0, 0, 0.1);
+  animation: securityAlert 1.5s ease-in-out infinite;
+}
+
+.security-health-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.security-health-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Firewall Visualization */
+.firewall-display {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(90deg, 
+    rgba(255, 0, 102, 0.1) 0%, 
+    rgba(255, 0, 102, 0.3) 50%, 
+    rgba(255, 0, 102, 0.1) 100%);
+  border: 2px solid var(--security-alert);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.firewall-barrier {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: var(--security-alert);
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+}
+
+.firewall-packet {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--security-scanning);
+  border-radius: 50%;
+  animation: packetFlow 3s linear infinite;
+}
+
+@keyframes packetFlow {
+  0% { left: 0%; opacity: 1; }
+  45% { left: 45%; opacity: 1; }
+  50% { left: 50%; opacity: 0; }
+  55% { left: 55%; opacity: 0; }
+  60% { left: 60%; opacity: 1; }
+  100% { left: 100%; opacity: 1; }
+}
+
+/* Responsive Security Design */
+@media (max-width: 768px) {
+  .security-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .threat-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .security-system-health {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+  }
+  
+  .security-radar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Security Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .security-status,
+  .security-avatar,
+  .scanner-sweep,
+  .progress-bar::after,
+  .radar-sweep {
+    animation: none;
+  }
+}
+
+/* Security High Contrast */
+@media (prefers-contrast: high) {
+  :root {
+    --system-primary: #ff0000;
+    --system-secondary: #0000ff;
+    --system-accent: #ffff00;
+    --system-text: #ffffff;
+    --system-bg: #000000;
+  }
+}
