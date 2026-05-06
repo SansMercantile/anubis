@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANUBIS™ | Interstellar Exploration & Planetary Management</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="../../shared_resources/website_template/constellation-base.css" />
+  <link rel="stylesheet" href="css/anubis-theme.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="ANUBIS™ - Advanced Interstellar Exploration & Planetary Management System featuring planetary simulation, terraforming, biological evolution, physics modeling, and interstellar propulsion systems." />
+  <meta name="keywords" content="interstellar exploration, planetary management, terraforming, space simulation, biological evolution, physics simulation, propulsion systems" />
+  <meta property="og:title" content="ANUBIS™ | Interstellar Exploration & Planetary Management" />
+  <meta property="og:description" content="Advanced Interstellar Exploration & Planetary Management System for space simulation and planetary development." />
+  <meta property="og:image" content="img/anubis-space.jpg" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <!-- Neural Grid Background -->
+  <div class="neural-grid-bg"></div>
+  
+  <!-- Particle System Container -->
+  <div class="particle-system"></div>
+  
+  <!-- Visitor Counter -->
+  <div class="visitor-counter">
+    <span class="status-dot"></span>
+    ANUBIS Planets Managed: <span id="visitor-count">1,247</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 10, 26, 0.9); backdrop-filter: blur(10px); padding: 1rem 2rem;">
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo-container">
+        <div class="logo-word">ANUBIS</div>
+        <img class="logo-icon" src="img/logo.svg" alt="ANUBIS Icon" />
+      </div>
+      <div style="display: flex; gap: 2rem; align-items: center;">
+        <a href="#exploration" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Exploration</a>
+        <a href="#planetary" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Planetary Management</a>
+        <a href="#simulation" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Simulation</a>
+        <a href="#portal" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Space Portal</a>
+        <a class="cta" href="mailto:anubis@sansmercantile.com?subject=ANUBIS%20Space%20Access">Request Access</a>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" style="padding-top: 100px;">
+    <!-- Hero Section -->
+    <section class="interactive-section" data-aos="fade-up" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
+      <div class="logo-container" style="margin-bottom: 2rem;">
+        <div class="logo-word">ANUBIS</div>
+        <img class="logo-icon" src="img/logo.svg" alt="ANUBIS Icon" />
+      </div>
+      <h1 class="gradient-text">Interstellar Exploration & Planetary Management</h1>
+      <p style="font-size: 1.3rem; max-width: 900px; margin: 0 auto 2rem;">
+        Advanced interstellar exploration and planetary management system featuring comprehensive planetary simulation, 
+        terraforming capabilities, biological evolution modeling, quantum physics simulation, and interstellar propulsion systems. 
+        Explore the cosmos and manage planetary ecosystems with ANUBIS.
+      </p>
+      
+      <!-- Space System Architecture -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="text-align: center; padding: 1rem; background: rgba(138, 43, 226, 0.1); border-radius: 10px; border: 1px solid var(--space-exploration);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌍</div>
+          <div style="font-size: 1.2rem; font-weight: bold;">1,247</div>
+          <div style="font-size: 0.9rem;">Planets Managed</div>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: rgba(0, 191, 255, 0.1); border-radius: 10px; border: 1px solid var(--space-physics);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+          <div style="font-size: 1.2rem; font-weight: bold;">89</div>
+          <div style="font-size: 0.9rem;">Propulsion Systems</div>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: rgba(46, 204, 113, 0.1); border-radius: 10px; border: 1px solid var(--space-terraforming);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌱</div>
+          <div style="font-size: 1.2rem; font-weight: bold;">156</div>
+          <div style="font-size: 0.9rem;">Terraforming Projects</div>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: rgba(255, 215, 0, 0.1); border-radius: 10px; border: 1px solid var(--space-quantum);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚛️</div>
+          <div style="font-size: 1.2rem; font-weight: bold;">∞</div>
+          <div style="font-size: 0.9rem;">Physics Simulations</div>
+        </div>
+      </div>
+
+      <div class="live-status" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 2rem 0;">
+        <div class="space-status exploration">
+          <div class="status-dot"></div>
+          Interstellar Navigation Active
+        </div>
+        <div class="space-status terraforming">
+          <div class="status-dot"></div>
+          Terraforming Simulations Running
+        </div>
+        <div class="space-status biology">
+          <div class="status-dot"></div>
+          Biological Evolution Modeling
+        </div>
+        <div class="space-status physics">
+          <div class="status-dot"></div>
+          Quantum Physics Engine Online
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a class="cta" href="#exploration">Explore Space</a>
+        <a class="cta" href="#portal">Mission Control</a>
+        <a class="cta" href="mailto:anubis@sansmercantile.com?subject=Space%20Exploration%20Partnership">Space Partnership</a>
+      </div>
+    </section>
+
+    <!-- Interstellar Exploration Section -->
+    <section id="exploration" class="interactive-section" data-aos="fade-up">
+      <h2>🚀 Interstellar Exploration Systems</h2>
+      <p>ANUBIS provides advanced interstellar exploration capabilities including propulsion systems, navigation, planetary discovery, and deep space mission management.</p>
+      
+      <div class="grid-2" style="margin: 3rem 0;">
+        <div class="space-card">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+            <div class="space-status physics">
+              <div class="status-dot"></div>
+              Propulsion Systems Online
+            </div>
+          </div>
+          <h3>Interstellar Propulsion Systems</h3>
+          <p>Advanced propulsion technology including ion drives, fusion rockets, and theoretical faster-than-light propulsion systems for interstellar travel and exploration missions.</p>
+          <div class="space-trajectory">
+            <div class="trajectory-line"></div>
+            <div class="trajectory-pulse"></div>
+          </div>
+          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🚀 Ion drive propulsion systems</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">⚡ Fusion rocket technology</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🌌 FTL theoretical propulsion</li>
+            <li style="padding: 0.5rem 0;">📡 Navigation and guidance systems</li>
+          </ul>
+        </div>
+
+        <div class="space-card">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚛️</div>
+            <div class="space-status physics">
+              <div class="status-dot"></div>
+              Quantum Simulations Active
+            </div>
+          </div>
+          <h3>Quantum Physics Simulator</h3>
+          <p>Sophisticated quantum physics simulation engine modeling subatomic particles, quantum fields, and fundamental forces for accurate space environment modeling.</p>
+          <div class="space-progress">
+            <div class="progress-bar" style="width: 87%;"></div>
+          </div>
+          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">⚛️ Subatomic particle simulation</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🌊 Quantum field interactions</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🔬 Fundamental force modeling</li>
+            <li style="padding: 0.5rem 0;">📊 Real-time physics calculations</li>
+          </ul>
+        </div>
+
+        <div class="space-card">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🌍</div>
+            <div class="space-status terraforming">
+              <div class="status-dot"></div>
+              Terraforming Active
+            </div>
+          </div>
+          <h3>Planetary Management & Terraforming</h3>
+          <p>Comprehensive planetary management system including atmospheric modeling, terraforming simulation, climate control, and planetary ecosystem development.</p>
+          <div class="planetary-orbit">
+            <div class="orbit-path"></div>
+            <div class="planet-marker"></div>
+          </div>
+          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🌬️ Atmospheric composition modeling</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🌡️ Climate and temperature control</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">💧 Water cycle management</li>
+            <li style="padding: 0.5rem 0;">🌱 Ecosystem development planning</li>
+          </ul>
+        </div>
+
+        <div class="space-card">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🧬</div>
+            <div class="space-status biology">
+              <div class="status-dot"></div>
+              Evolution Modeling
+            </div>
+          </div>
+          <h3>Biological Evolution Engine</h3>
+          <p>Advanced biological evolution simulator modeling organism development, genetic adaptation, ecosystem dynamics, and life form evolution in various planetary environments.</p>
+          <div class="space-progress">
+            <div class="progress-bar" style="width: 94%;"></div>
+          </div>
+          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🧬 Genetic evolution modeling</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🦠 Organism adaptation simulation</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(138, 43, 226, 0.2);">🌿 Ecosystem dynamics modeling</li>
+            <li style="padding: 0.5rem 0;">🔬 Fitness function optimization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planetary Management Section -->
+    <section id="planetary" class="interactive-section" data-aos="fade-up">
+      <h2>🌍 Planetary Management Center</h2>
+      <p>Comprehensive planetary management and simulation capabilities powered by ANUBIS's advanced modeling systems for complete planetary ecosystem control.</p>
+      
+      <div class="space-control-center">
+        <h3>Mission Control Dashboard</h3>
+        <div class="space-system-health">
+          <div class="space-health-indicator exploration">
+            <div class="space-health-value">99.7%</div>
+            <div class="space-health-label">System Integrity</div>
+          </div>
+          <div class="space-health-indicator terraforming">
+            <div class="space-health-value">156</div>
+            <div class="space-health-label">Active Projects</div>
+          </div>
+          <div class="space-health-indicator biology">
+            <div class="space-health-value">89</div>
+            <div class="space-health-label">Evolution Models</div>
+          </div>
+          <div class="space-health-indicator physics">
+            <div class="space-health-value">∞</div>
+            <div class="space-health-label">Physics Calculations</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-monitor">
+        <div class="monitor-header">
+          <div class="monitor-title">🌌 Real-Time Space Operations</div>
+          <div class="monitor-status">Live Simulation</div>
+        </div>
+        <div class="space-operations-grid">
+          <div class="operation-item exploration">
+            <h4>🚀 Interstellar Navigation</h4>
+            <p>Advanced navigation systems calculating optimal trajectories for interstellar travel with real-time course corrections and hazard avoidance.</p>
+            <div class="space-status exploration">
+              <div class="status-dot"></div>
+              Navigating - 23 active missions
+            </div>
+          </div>
+          <div class="operation-item terraforming">
+            <h4>🌍 Planetary Terraforming</h4>
+            <p>Comprehensive terraforming simulation managing atmospheric composition, temperature regulation, and ecosystem development for planetary habitability.</p>
+            <div class="space-status terraforming">
+              <div class="status-dot"></div>
+              Terraforming - 156 planets in progress
+            </div>
+          </div>
+          <div class="operation-item biology">
+            <h4>🧬 Biological Evolution</h4>
+            <p>Advanced biological evolution modeling simulating organism development, genetic adaptation, and ecosystem dynamics across diverse planetary environments.</p>
+            <div class="space-status biology">
+              <div class="status-dot"></div>
+              Evolving - 89 species models active
+            </div>
+          </div>
+          <div class="operation-item physics">
+            <h4>⚛️ Quantum Physics Engine</h4>
+            <p>Sophisticated quantum physics simulation modeling subatomic particles, quantum fields, and fundamental forces for accurate space environment physics.</p>
+            <div class="space-status physics">
+              <div class="status-dot"></div>
+              Computing - Infinite calculations/sec
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <button class="cta" onclick="launchMission()">Launch Space Mission</button>
+        <button class="cta" onclick="viewPlanetaryData()">View Planetary Data</button>
+        <button class="cta" onclick="startTerraforming()">Begin Terraforming</button>
+      </div>
+    </section>
+
+    <!-- Simulation Systems Section -->
+    <section id="simulation" class="interactive-section" data-aos="fade-up">
+      <h2>🔬 Advanced Simulation Systems</h2>
+      <p>ANUBIS provides comprehensive simulation capabilities for modeling complex space environments, planetary systems, and interstellar phenomena with scientific accuracy.</p>
+      
+      <div class="simulation-results">
+        <div class="sim-variant active">
+          <h3>🌌 Space Environment Simulation</h3>
+          <div class="space-status exploration">
+            <div class="status-dot"></div>
+            Real-Time Modeling
+          </div>
+          <p>Comprehensive space environment modeling including gravitational fields, radiation, cosmic phenomena, and interstellar medium properties.</p>
+          <div class="space-progress">
+            <div class="progress-bar" style="width: 95%;"></div>
+          </div>
+          <div style="margin: 1rem 0;">
+            <div><strong>Gravitational Accuracy:</strong> 99.9%</div>
+            <div><strong>Radiation Modeling:</strong> Complete</div>
+            <div><strong>Cosmic Phenomena:</strong> 847 types</div>
+          </div>
+        </div>
+        
+        <div class="sim-variant">
+          <h3>🌍 Planetary Ecosystem Simulation</h3>
+          <div class="space-status terraforming">
+            <div class="status-dot"></div>
+            Ecosystem Modeling
+          </div>
+          <p>Advanced planetary ecosystem simulation modeling atmospheric dynamics, geological processes, and biological interactions for comprehensive planetary management.</p>
+          <div class="space-progress">
+            <div class="progress-bar" style="width: 88%;"></div>
+          </div>
+          <div style="margin: 1rem 0;">
+            <div><strong>Atmospheric Models:</strong> 23 types</div>
+            <div><strong>Geological Processes:</strong> Active</div>
+            <div><strong>Biological Interactions:</strong> 156 species</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin: 3rem 0;">
+        <div class="space-card">
+          <h3>🎮 Simulation Control Interface</h3>
+          <div class="space-status physics">
+            <div class="status-dot"></div>
+            Simulation Manager Active
+          </div>
+          <p>Advanced simulation control interface providing real-time parameter adjustment, scenario modeling, and comprehensive simulation management capabilities.</p>
+          <div class="space-progress">
+            <div class="progress-bar" style="width: 92%;"></div>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.5rem 0;">🎛️ Real-time parameter control</li>
+            <li style="padding: 0.5rem 0;">📊 Simulation state management</li>
+            <li style="padding: 0.5rem 0;">⏱️ Time progression control</li>
+            <li style="padding: 0.5rem 0;">📈 Performance monitoring</li>
+          </ul>
+          <button class="cta" onclick="openSimulationControl()">Simulation Control</button>
+        </div>
+
+        <div class="space-card">
+          <h3>🌌 Space Mission Coordination</h3>
+          <div class="space-status exploration">
+            <div class="status-dot"></div>
+            23 Active Missions
+          </div>
+          <p>Comprehensive space mission coordination system managing interstellar exploration missions, resource allocation, and mission success optimization.</p>
+          <div class="grid-2" style="margin: 1rem 0;">
+            <div style="text-align: center; padding: 1rem; background: rgba(138, 43, 226, 0.1); border-radius: 10px;">
+              <div style="font-size: 1.5rem; font-weight: bold;">23</div>
+              <div style="font-size: 0.9rem;">Active Missions</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: rgba(138, 43, 226, 0.1); border-radius: 10px;">
+              <div style="font-size: 1.5rem; font-weight: bold;">94%</div>
+              <div style="font-size: 0.9rem;">Mission Success Rate</div>
+            </div>
+          </div>
+          <button class="cta" onclick="viewMissionControl()">Mission Control</button>
+        </div>
+      </div>
+
+      <!-- Blog Container -->
+      <div id="blog-container" style="margin-top: 3rem;">
+        <div class="space-card">
+          <div class="space-status exploration">
+            <div class="status-dot"></div>
+            Loading Space Intelligence
+          </div>
+          <h4>Loading ANUBIS Space Exploration Insights...</h4>
+          <p>Please wait while we load the latest interstellar research and planetary management discoveries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANUBIS Space Portal Section -->
+    <section id="portal" class="interactive-section" data-aos="fade-up">
+      <h2>🚀 ANUBIS Space Portal</h2>
+      <p>Access the complete ANUBIS interstellar exploration ecosystem through our integrated portal. Experience advanced planetary management, space simulation, and mission control capabilities.</p>
+      
+      <div class="portal-frame">
+        <div class="portal-loading">
+          <div class="loading-spinner"></div>
+          <p>Initializing ANUBIS Space Systems...</p>
+          <div class="space-status exploration">
+            <div class="status-dot"></div>
+            Connecting to Mission Control Center
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin: 3rem 0;">
+        <div class="space-card">
+          <h4>🌌 Mission Control</h4>
+          <div class="space-status exploration">
+            <div class="status-dot"></div>
+            All Systems Operational
+          </div>
+          <p>Comprehensive mission control dashboard with real-time space mission monitoring, navigation control, and interstellar communication systems.</p>
+          <button class="cta" onclick="openMissionControl()">Mission Control</button>
+        </div>
+        
+        <div class="space-card">
+          <h4>🌍 Planetary Manager</h4>
+          <div class="space-status terraforming">
+            <div class="status-dot"></div>
+            156 Planets Managed
+          </div>
+          <p>Advanced planetary management tools for terraforming, ecosystem development, and planetary system optimization across multiple worlds.</p>
+          <button class="cta" onclick="openPlanetaryManager()">Planetary Manager</button>
+        </div>
+        
+        <div class="space-card">
+          <h4>🔬 Simulation Laboratory</h4>
+          <div class="space-status physics">
+            <div class="status-dot"></div>
+            Physics Engine Running
+          </div>
+          <p>Advanced simulation laboratory providing quantum physics modeling, biological evolution simulation, and space environment testing capabilities.</p>
+          <button class="cta" onclick="openSimulationLab()">Simulation Lab</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Space Exploration Achievement Section -->
+    <section class="interactive-section" data-aos="fade-up">
+      <div style="background: var(--space-gradient); border: 2px solid var(--space-exploration); border-radius: 15px; padding: 2rem; text-align: center; color: white;">
+        <h3>🌌 24/7 Interstellar Operations</h3>
+        <p>ANUBIS provides continuous interstellar exploration with advanced planetary management, quantum physics simulation, and biological evolution modeling.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+          <button class="cta" onclick="exploreGalaxy()" style="background: white; color: var(--space-exploration);">Explore Galaxy</button>
+          <button class="cta" onclick="spaceConsultation()" style="background: white; color: var(--space-exploration);">Space Consultation</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: rgba(10, 10, 26, 0.9); padding: 3rem 2rem; margin-top: 4rem; border-top: 1px solid var(--space-exploration);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <div class="logo-container" style="margin-bottom: 2rem;">
+        <div class="logo-word">ANUBIS</div>
+        <img class="logo-icon" src="img/logo.svg" alt="ANUBIS Icon" />
+      </div>
+      <p style="margin-bottom: 2rem;">Advanced Interstellar Exploration & Planetary Management - Exploring the Cosmos Through Intelligent Simulation</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <a href="mailto:anubis@sansmercantile.com" style="color: var(--space-exploration); text-decoration: none;">Contact</a>
+        <a href="mailto:space@sansmercantile.com" style="color: var(--space-exploration); text-decoration: none;">Space Operations</a>
+        <a href="mailto:partnerships@sansmercantile.com" style="color: var(--space-exploration); text-decoration: none;">Partnerships</a>
+        <a href="mailto:support@sansmercantile.com" style="color: var(--space-exploration); text-decoration: none;">Support</a>
+      </div>
+      <div class="space-status exploration">
+        <div class="status-dot"></div>
+        ANUBIS Space AI - Always Exploring, Always Discovering
+      </div>
+      <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">© 2024 SansMercantile™ Constellation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../shared_resources/website_template/constellation-interactive.js"></script>
+  <script src="js/anubis-space.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init();
+
+    // ANUBIS-specific functions
+    function launchMission() {
+      alert('🚀 Initiating ANUBIS Space Mission...\n\nPreparing interstellar exploration mission with advanced propulsion systems.\n\nCalculating optimal trajectory and mission parameters...');
+    }
+
+    function viewPlanetaryData() {
+      alert('🌍 Loading Planetary Management Data...\n\nAccessing comprehensive planetary data including atmospheric composition, terraforming progress, and ecosystem development status.');
+    }
+
+    function startTerraforming() {
+      alert('🌱 Beginning Terraforming Simulation...\n\nANUBIS is initializing terraforming protocols for planetary atmosphere and ecosystem development.');
+    }
+
+    function openSimulationControl() {
+      alert('🎮 Opening Simulation Control Interface...\n\nAdvanced simulation management with real-time parameter control and scenario modeling.');
+    }
+
+    function viewMissionControl() {
+      alert('🌌 Opening Mission Control Center...\n\nComprehensive space mission coordination and interstellar navigation control systems.');
+    }
+
+    function openMissionControl() {
+      alert('🌌 Opening Mission Control Dashboard...\n\nReal-time space mission monitoring and interstellar communication systems.');
+    }
+
+    function openPlanetaryManager() {
+      alert('🌍 Opening Planetary Manager...\n\nAdvanced planetary management tools for terraforming and ecosystem development.');
+    }
+
+    function openSimulationLab() {
+      alert('🔬 Opening Simulation Laboratory...\n\nQuantum physics modeling and biological evolution simulation platform.');
+    }
+
+    function exploreGalaxy() {
+      alert('🌌 GALAXY EXPLORATION INITIATED\n\nANUBIS interstellar systems are preparing for deep space exploration.\n\nExpected discoveries: New planetary systems and potential terraforming candidates.');
+    }
+
+    function spaceConsultation() {
+      window.open('mailto:space@sansmercantile.com?subject=ANUBIS Space Exploration Consultation Request', '_blank');
+    }
+
+    // Initialize ANUBIS Interactive System
+    document.addEventListener('DOMContentLoaded', () => {
+      const anubisConfig = {
+        name: 'ANUBIS',
+        primaryColor: '#8a2be2',
+        messages: [
+          'Welcome to ANUBIS Space Exploration! 🚀',
+          'Interstellar navigation systems online',
+          'Planetary management ready',
+          'Terraforming simulations active',
+          'Quantum physics engine operational',
+          'Biological evolution modeling ready',
+          'Explore the infinite cosmos'
+        ]
+      };
+
+      window.anubisSystem = new ConstellationInteractiveSystem(anubisConfig);
+      window.anubisBlog = new ConstellationBlogSystem('ANUBIS', '#8a2be2');
+      
+      // Load portal content after delay
+      setTimeout(() => {
+        const portalFrame = document.querySelector('.portal-frame');
+        if (portalFrame) {
+          portalFrame.innerHTML = `
+            <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;padding:2rem;">
+              <div class="space-status exploration"><div class="status-dot"></div>Web App Link</div>
+              <a class="cta" href="../src/" target="_blank" rel="noopener">Open ANUBIS Web App</a>
+              <p style="opacity:.8;font-size:.9rem">Tip: run the ANUBIS web app and serve the build output in production. This button links to the app root.</p>
+            </div>
+          `;
+        }
+      }, 3000);
+
+      console.log('🌌 ANUBIS Space Exploration System initialized');
+    });
+  </script>
+</body>
+</html>
